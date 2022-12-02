@@ -13,7 +13,7 @@ data "aws_iam_policy_document" "iterator" {
 // The function that calls the function of interest
 module "lambda_iterator" {
   source  = "Invicton-Labs/lambda-set/aws"
-  version = "~> 0.4.2"
+  version = "~> 0.5"
   edge    = false
   lambda_config = {
     function_name                  = "subminute-lambda-event-iterator-${random_id.id.hex}"
